@@ -1,0 +1,31 @@
+# install modules
+node_modules
+typings
+typings.json
+
+yarn-error.log
+dist/
+#lib/
+types/
+
+# mac
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vs_code
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+*.lock
+package-lock.json
+outputBundle
+.eslintcache

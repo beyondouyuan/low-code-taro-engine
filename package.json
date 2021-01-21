@@ -1,0 +1,15 @@
+{
+  "name": "zero-code-taro-engine",
+  "version": "0.1.0",
+  "private": true,
+  "appConfig":"../generate-app/src/app.config.js",
+  "appPackageJson": "../generate-app/package.json",
+  "appPagesFolder": "../generate-app/src/pages",
+  "scripts": {
+    "start": "node ./bin/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

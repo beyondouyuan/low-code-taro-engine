@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "low-code-taro-engine",
+			"path": "../../low-code-taro-engine"
+		},
+		{
+			"name": "bin",
+			"path": "../bin"
+		},
+		{
+			"name": "data",
+			"path": "."
+		},
+		{
+			"name": "generate-app",
+			"path": "../generate-app"
+		},
+		{
+			"name": "template",
+			"path": "../template"
+		},
+		{
+			"name": "utils",
+			"path": "../utils"
+		}
+	],
+	"settings": {}
+}
