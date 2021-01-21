@@ -1,0 +1,14 @@
+/**
+ * @Author:"zhangbin"
+ * @Email:"zhangbin29@jd.com"
+ * @LastEditTime:"2021-01-14 14:11"
+ * @Description:" 引擎入口 "
+ */
+const Data = require("../data");
+const initialize = require("./initialize");
+const replaceImages = require("./replaceImagesUrl");
+
+/**本地化图标 */
+replaceImages(Data);
+/**start 生成 */
+initialize(Data);
