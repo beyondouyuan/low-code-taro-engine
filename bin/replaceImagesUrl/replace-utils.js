@@ -8,9 +8,9 @@
 const urlModule = require("url");
 const fs = require("fs");
 const http = require("http");
-const path = require('path')
-const asyncModule = require('async')
-const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+const path = require("path");
+const userAgent =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";
 
 /**校验url */
 const checkValidateUrl = (url = "") => {
@@ -32,7 +32,7 @@ const downloadImage = (
   fileName,
   { timeout = 1 * 60 * 1000, retries = 4 } = {}
 ) => {
-  dest = path.join(__dirname, dest)
+  dest = path.join(__dirname, dest);
   if (!fs.existsSync(dest)) {
     fs.mkdirSync(dest);
   }
@@ -58,37 +58,18 @@ const downloadImage = (
 };
 
 /**异步批量下载 */
-const asynDownloadMultiImages = (
-  images,
-  dest,
-  { asyncNum = 2, callback = () => {} } = {}
-) => {
-  asyncModule.mapLimit(
-    images,
-    asyncNum,
-    function (imgUrl, callback) {
-      let {
-        schema: { fileName },
-      } = checkValidateUrl(imgUrl);
-
-      if (fileName) {
-        downloadImage(imgUrl, dest, fileName);
-        callback(null, fileName);
-      } else {
-        console.log("非法imgUrl: " + imgUrl);
-      }
-    },
-    function (err, result) {
-      if (err) {
-        console.log(err);
-      } else {
-        callback(result);
-      }
+const asynDownloadMultiImages = (images, dest) => {
+  images.forEach((image) => {
+    const {
+      schema: { fileName },
+    } = checkValidateUrl(image);
+    if (fileName) {
+      downloadImage(image, dest, fileName);
     }
-  );
+  });
 };
 
 module.exports = {
-    asynDownloadMultiImages,
-    checkValidateUrl,
-}
+  asynDownloadMultiImages,
+  checkValidateUrl,
+};
