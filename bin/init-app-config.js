@@ -1,6 +1,6 @@
 /**
- * @Author:"zhangbin"
- * @Email:"zhangbin29@jd.com"
+ * @Author:"xiaobinbin"
+ * @Email:"1933495710@qq.com"
  * @LastEditTime:"2020-01-19 14:11"
  * @Description:" 生成app.config.js "
  */

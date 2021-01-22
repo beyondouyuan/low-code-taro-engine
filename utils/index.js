@@ -1,6 +1,6 @@
 /**
- * @Author:"zhangbin"
- * @Email:"zhangbin29@jd.com"
+ * @Author:"xiaobinbin"
+ * @Email:"1933495710@qq.com"
  * @LastEditTime:"2021-01-18 10:11"
  * @Description:" 工具方法 "
  */
